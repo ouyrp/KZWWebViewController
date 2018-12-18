@@ -24,7 +24,7 @@
 @property(nonatomic, strong) FMWKWebViewBridge *webViewBridge;
 @property(nonatomic, strong) WKWebView *webView;
 @property (strong, nonatomic) UIBarButtonItem *firstBar;
-@property (nonatomic, copy) void (^callBack)(void);
+@property (nonatomic, copy) void (^callBack)(NSString *);
 
 @end
 
@@ -49,7 +49,7 @@
     return self;
 }
 
-- (instancetype)initWithUrl:(NSString *)urlString callBackHandle:(void (^)(void))callBackHandle {
+- (instancetype)initWithUrl:(NSString *)urlString callBackHandle:(void (^)(NSString *))callBackHandle {
     if (self = [super init]) {
         self.urlString = urlString;
         _callBack = [callBackHandle copy];
@@ -195,6 +195,9 @@
         button;
     })];
     self.navigationItem.leftBarButtonItems = @[self.firstBar, itemtwo];
+    if (self.callBack) {
+        self.callBack(@"sucess");
+    }
 }
 
 - (WKWebView *)webView:(WKWebView *)webView createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration forNavigationAction:(WKNavigationAction *)navigationAction windowFeatures:(WKWindowFeatures *)windowFeatures {

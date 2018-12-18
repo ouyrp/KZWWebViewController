@@ -17,6 +17,6 @@
 
 - (instancetype)initHTMLString:(NSString *)htmlString baseURL:(NSString *)baseURL;
 
-- (instancetype)initWithUrl:(NSString *)urlString callBackHandle:(void (^)(void))callBackHandle;
+- (instancetype)initWithUrl:(NSString *)urlString callBackHandle:(void (^)(NSString *))callBackHandle;
 
 @end

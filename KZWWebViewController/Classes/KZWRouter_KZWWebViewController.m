@@ -17,7 +17,7 @@
     NSString *baseURL = [params valueForKey:@"baseURL"];
     NSURLRequest *request = [params valueForKey:@"request"];
     
-    typedef void (^callBackHandle)(void);
+    typedef void (^callBackHandle)(NSString *);
     callBackHandle callBack = [params valueForKey:@"callBack"];
     
     KZWWebViewController *viewcontroller = nil;

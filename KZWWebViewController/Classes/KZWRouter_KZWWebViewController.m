@@ -11,10 +11,13 @@
 @implementation KZWRouter_KZWWebViewController
 
 - (UIViewController *)KZWWebViewController:(NSDictionary *)params {
-    typedef void (^callBackHandle)(void);
+    
     NSString *urlString = [params valueForKey:@"urlString"];
     NSString *htmlString = [params valueForKey:@"htmlString"];
     NSString *baseURL = [params valueForKey:@"baseURL"];
+    NSURLRequest *request = [params valueForKey:@"request"];
+    
+    typedef void (^callBackHandle)(void);
     callBackHandle callBack = [params valueForKey:@"callBack"];
     
     KZWWebViewController *viewcontroller = nil;
@@ -22,6 +25,8 @@
         viewcontroller = [[KZWWebViewController alloc] initWithUrl:urlString callBackHandle:callBack];
     }else if (htmlString.length > 0) {
         viewcontroller = [[KZWWebViewController alloc] initHTMLString:htmlString baseURL:baseURL];
+    }else if (request) {
+        viewcontroller = [[KZWWebViewController alloc] initWithRequest:request];
     }
     return viewcontroller;
 }

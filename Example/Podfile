@@ -1,0 +1,14 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'KZWWebViewController_Example' do
+  pod 'KZWWebViewController', :path => '../'
+  pod 'KZWRouter'
+
+  target 'KZWWebViewController_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

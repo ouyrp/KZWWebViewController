@@ -15,10 +15,11 @@
     NSString *urlString = [params valueForKey:@"urlString"];
     NSString *htmlString = [params valueForKey:@"htmlString"];
     NSString *baseURL = [params valueForKey:@"baseURL"];
+    callBackHandle callBack = [params valueForKey:@"callBack"];
     
     KZWWebViewController *viewcontroller = nil;
     if (urlString.length > 0) {
-        viewcontroller = [[KZWWebViewController alloc] initWithUrl:urlString];
+        viewcontroller = [[KZWWebViewController alloc] initWithUrl:urlString callBackHandle:callBack];
     }else if (htmlString.length > 0) {
         viewcontroller = [[KZWWebViewController alloc] initHTMLString:htmlString baseURL:baseURL];
     }

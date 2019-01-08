@@ -146,10 +146,12 @@
                                    initWithSource:[NSString stringWithFormat:@"document.cookie = '%@'", [self setCurrentCookie]]
                                    injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO];
     [userContentController addUserScript:cookieScript];
+    [userContentController addScriptMessageHandler:[[KZWWeakScriptMessageDelegate alloc] initWithDelegate:self] name:@"BKJFReload"];
     WKCookieSyncManager *cookiesManager = [WKCookieSyncManager sharedWKCookieSyncManager];
     WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
     configuration.processPool = cookiesManager.processPool;
     configuration.userContentController = userContentController;
+    
     self.webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, KZW_NavigationBarHeight, SCREEN_WIDTH, SCREEN_HEIGHT - KZW_NavigationBarHeight) configuration:configuration];
     if (KZW_iPhoneX) {
         self.webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;

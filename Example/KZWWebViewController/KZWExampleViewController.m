@@ -31,7 +31,7 @@
 }
 
 - (void)webAction {
-    [[KZWRouter sharedRouter] open:@"KZWRouter_KZWWebViewController://KZWWebViewController?urlString=https%3a%2f%2fwww.zhihu.com%2f"];
+    [[KZWRouter sharedRouter] open:@"KZWRouter_KZWWebViewController://KZWWebViewController?urlString=https%3a%2f%2fwww.baidu.com%2f"];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

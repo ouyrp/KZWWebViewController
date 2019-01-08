@@ -10,6 +10,8 @@
 #endif
 #endif
 
+#import "BKJFURLCacheUtil.h"
+#import "BKJFWeakScriptMessageDelegate.h"
 #import "KZWJavaScripInterface.h"
 #import "KZWRouter_KZWWebViewController.h"
 #import "KZWWebViewController.h"

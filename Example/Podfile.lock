@@ -28,7 +28,7 @@ PODS:
   - KZWUtils/Content (1.0.6):
     - MJRefresh
     - SAMKeychain
-  - KZWWebViewController (0.1.0):
+  - KZWWebViewController (2.0.1):
     - FMWebViewJavascriptBridge
     - KZWUI
   - Masonry (1.1.0)
@@ -62,7 +62,7 @@ SPEC CHECKSUMS:
   KZWRouter: d03e667d042c6b6e0d1a94a3f0cea19dda5dfed4
   KZWUI: 197ddd1564c39671c16444b424ba6b479eb6a0a1
   KZWUtils: 1bcf6065e6902ae62d49cfb264139294de835212
-  KZWWebViewController: efd4a522115b22462f51229ef08261d25ff4912c
+  KZWWebViewController: 5e421f5276b59a14f27dcb2783f0c4a0dd6782b3
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
